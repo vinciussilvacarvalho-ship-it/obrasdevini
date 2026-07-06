@@ -346,9 +346,6 @@
   }
   .artwork-card:hover .artwork-overlay { opacity: 1; }
 
-
-
-
   .artwork-series {
     font-size: 9px;
     letter-spacing: .2em;
@@ -393,58 +390,7 @@
   .artwork-wa-btn:hover { background: var(--gold-lt); }
   .artwork-wa-btn svg { width: 14px; height: 14px; }
 
-
   /* ── ARTIST SECTION ── */
-  .artist-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 540px;
-    border-top: 1px solid var(--border);
-    margin: 0 48px 80px;
-  }
-  .artist-visual {
-    background: linear-gradient(135deg, #141008 0%, #201a0a 40%, #0f0c06 100%);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .artist-visual-overlay {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 40% 50%, rgba(201,168,76,.15) 0%, transparent 65%);
-  }
-  .artist-monogram {
-    font-family: var(--ff-display);
-    font-size: 180px;
-    font-weight: 900;
-    font-style: italic;
-    color: rgba(201,168,76,.08);
-    line-height: 1;
-    user-select: none;
-    position: absolute;
-  }
-  .artist-photo-placeholder {
-    width: 200px; height: 280px;
-    border: 1px solid rgba(201,168,76,.2);
-    position: relative; z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,.3);
-  }
-  .artist-photo-placeholder span {
-    font-size: 11px;
-    letter-spacing: .1em;
-    color: rgba(201,168,76,.4);
-    text-transform: uppercase;
-  }
-  .artist-content {
-    padding: 64px 56px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   .artist-content .section-eyebrow { margin-bottom: 16px; }
   .artist-content .section-title { margin-bottom: 24px; }
   .artist-quote {
@@ -637,33 +583,89 @@
   }
 
   /* ── SENNA TRIBUTE ── */
-  .tribute-strip {
-    position: relative;
-    border-top: 1px solid var(--border);
-    min-height: 820px;
-    display: flex;
-    align-items: center;
-    background-size: contain;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-color: #0a0a0a;
-    overflow: hidden;
-  }
-  .tribute-shade {
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(10,10,10,.96) 0%, rgba(10,10,10,.82) 30%, rgba(10,10,10,.15) 55%, rgba(10,10,10,0) 70%);
-  }
-  .tribute-content {
-    position: relative;
-    z-index: 2;
-    padding: 96px 48px;
-    max-width: 640px;
-  }
+
   .tribute-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
-  .tribute-title { font-family: var(--ff-display); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 22px; text-shadow: 0 2px 20px rgba(0,0,0,.6); }
+  .tribute-title { font-family: var(--ff-display); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 22px; }
   .tribute-title em { font-style: italic; color: var(--gold); }
-  .tribute-text { font-family: var(--ff-editorial); font-size: 17px; font-style: italic; font-weight: 300; line-height: 1.9; color: rgba(240,237,232,.85); text-shadow: 0 1px 14px rgba(0,0,0,.7); }
+  .tribute-text { font-family: var(--ff-editorial); font-size: 17px; font-style: italic; font-weight: 300; line-height: 1.9; color: rgba(240,237,232,.85); }
   .tribute-rule { width: 56px; height: 1px; background: var(--gold); opacity: .6; margin: 28px 0 0; }
+
+  /* ── ARTIST + TRIBUTE (unified) ── */
+  .artist-tribute {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--carbon);
+    border-top: 1px solid var(--border);
+    align-items: stretch;
+  }
+  .artist-tribute-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .artist-tribute-content {
+    padding: 96px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 720px;
+  }
+  .artist-quote {
+    font-family: var(--ff-editorial);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(240,237,232,.85);
+    border-left: 2px solid var(--gold);
+    padding-left: 24px;
+    margin: 32px 0 32px;
+  }
+  .artist-bio {
+    font-size: 14px;
+    line-height: 1.85;
+    color: rgba(240,237,232,.72);
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+  .tribute-block {
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .tribute-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .tribute-title {
+    font-family: var(--ff-display);
+    font-size: clamp(24px, 2.6vw, 32px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .tribute-title em { font-style: italic; color: var(--gold); }
+  .tribute-text {
+    font-family: var(--ff-editorial);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.85;
+    color: rgba(240,237,232,.78);
+  }
+  .tribute-rule {
+    width: 48px; height: 1px;
+    background: var(--gold);
+    opacity: .5;
+    margin-top: 24px;
+  }
 
   /* ── WA STRIP ── */
   .wa-strip {
@@ -736,16 +738,17 @@
     .section-header { padding: 60px 24px 32px; flex-direction: column; align-items: flex-start; gap: 16px; }
     .gallery-grid { padding: 0 24px 60px; grid-template-columns: 1fr; gap: 14px; }
     .artwork-card.wide { grid-column: span 1; aspect-ratio: 2/1; }
-        .artist-section { grid-template-columns: 1fr; margin: 0 24px 60px; }
-    .artist-visual { min-height: 260px; }
-    .artist-content { padding: 40px 24px; }
-    .testimonials-section { padding: 60px 24px; }
+              .testimonials-section { padding: 60px 24px; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .hero-captions { right: 24px; bottom: 48px; }
     .hero-caption { max-width: 240px; }
     .hero-caption-text { font-size: 12px; }
-    .tribute-strip { min-height: 460px; }
-    .tribute-content { padding: 64px 24px; }
+          .artist-tribute { grid-template-columns: 1fr; }
+    .artist-tribute-photo { min-height: 420px; }
+    .artist-tribute-content { padding: 56px 24px; }
+    .artist-quote { font-size: 17px; padding-left: 18px; }
+    .artist-bio { margin-bottom: 36px; }
+    .tribute-block { padding-top: 32px; }
     .process-section { padding: 60px 24px; grid-template-columns: 1fr; gap: 40px; }
     .process-atelier { margin-top: 40px; padding-top: 40px; grid-template-columns: 1fr; gap: 28px; }
     .process-atelier-photo { min-height: 220px; }
@@ -982,13 +985,9 @@
 <!-- CATEGORIES -->
 
 <!-- ARTIST -->
-<section class="artist-section" id="artista">
-  <div class="artist-visual">
-    <div class="artist-visual-overlay"></div>
-    <div class="artist-monogram">V</div>
-    <div class="artist-photo-placeholder"><span>Foto do artista</span></div>
-  </div>
-  <div class="artist-content">
+<section class="artist-tribute" id="artista">
+  <img class="artist-tribute-photo" src="img/homenagem-senna.jpg" alt="Vinícius S. Carvalho segurando a releitura do capacete de Ayrton Senna">
+  <div class="artist-tribute-content">
     <div class="section-eyebrow">O Artista</div>
     <h2 class="section-title">Vinícius<br><em>S. Carvalho</em></h2>
     <blockquote class="artist-quote">
@@ -997,19 +996,14 @@
     <p class="artist-bio">
       Baiano, apaixonado por carros desde criança, Vinícius desenvolveu uma técnica própria que combina precisão e expressividade. Cada obra nasce de uma pintura digital feita à mão, traço a traço, no tablet, e é finalizada em impressão de pigmento mineral sobre canvas Canson Infinity PhotoArt ProCanvas 395g, tensionada em chassi artesanal de madeira de lei folheada, com moldura escada. Suas obras já decoram coleções em todo o Brasil, de garagens de colecionadores a salas de executivos.
     </p>
-  </div>
-</section>
-
-<!-- HOMENAGEM SENNA -->
-<section class="tribute-strip" id="homenagem" style="background-image:url('img/homenagem-senna.jpg')">
-  <div class="tribute-shade"></div>
-  <div class="tribute-content">
-    <div class="tribute-eyebrow">Uma homenagem</div>
-    <h2 class="tribute-title">A releitura que <em>não se vende</em></h2>
-    <p class="tribute-text">
-      Esta releitura do capacete de Ayrton Senna nunca esteve à venda. Ayrton segue inspirando até hoje, fora das pistas e dentro do coração dos brasileiros: símbolo de fé, dedicação e amor pelo que se faz. Esta obra existe como gratidão, uma homenagem do artista a quem o inspira desde sempre.
-    </p>
-    <div class="tribute-rule"></div>
+    <div class="tribute-block" id="homenagem">
+      <div class="tribute-eyebrow">Uma homenagem</div>
+      <h3 class="tribute-title">A releitura que <em>não se vende</em></h3>
+      <p class="tribute-text">
+        Esta releitura do capacete de Ayrton Senna nunca esteve à venda. Ayrton segue inspirando até hoje, fora das pistas e dentro do coração dos brasileiros: símbolo de fé, dedicação e amor pelo que se faz. Esta obra existe como gratidão, uma homenagem do artista a quem o inspira desde sempre.
+      </p>
+      <div class="tribute-rule"></div>
+    </div>
   </div>
 </section>
 
@@ -1073,7 +1067,7 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="section-eyebrow">Depoimentos</div>
-  <h2 class="section-title">O que dizem<br>os <em>colecionadores</em></h2>
+  <h2 class="section-title">O que <em>dizem</em></h2>
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="testimonial-quote">Arte automotiva de quem realmente entende o que um capacete do Senna significa. Obra com lugar garantido no meu acervo.</div>
@@ -1104,7 +1098,7 @@
         <div>
           <div class="testimonial-name">Sérgio Magalhães</div>
           <div class="testimonial-detail">Advogado, piloto e colecionador de Porsche</div>
-          <div class="testimonial-artwork">Releitura do capacete do piloto · Porsche 356</div>
+          <div class="testimonial-artwork">Releitura do capacete do piloto</div>
         </div>
       </div>
     </div>
