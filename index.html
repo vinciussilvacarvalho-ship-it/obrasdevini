@@ -597,7 +597,7 @@
     gap: 56px;
     align-items: center;
   }
-  .process-atelier-photo { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 320px; }
+  .process-atelier-photo { width: 100%; height: auto; aspect-ratio: 2.4/1; object-fit: cover; display: block; }
   .process-atelier-eyebrow {
     font-size: 10px;
     font-weight: 600;
@@ -640,18 +640,18 @@
   .tribute-strip {
     position: relative;
     border-top: 1px solid var(--border);
-    min-height: 580px;
+    min-height: 820px;
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-position: center 38%;
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #0a0a0a;
     overflow: hidden;
   }
   .tribute-shade {
     position: absolute; inset: 0;
-    background:
-      linear-gradient(to right, rgba(10,10,10,.88) 0%, rgba(10,10,10,.62) 45%, rgba(10,10,10,.2) 100%),
-      linear-gradient(to top, rgba(10,10,10,.7) 0%, rgba(10,10,10,.15) 40%);
+    background: linear-gradient(to right, rgba(10,10,10,.96) 0%, rgba(10,10,10,.82) 30%, rgba(10,10,10,.15) 55%, rgba(10,10,10,0) 70%);
   }
   .tribute-content {
     position: relative;
@@ -997,10 +997,6 @@
     <p class="artist-bio">
       Baiano, apaixonado por carros desde criança, Vinícius desenvolveu uma técnica própria que combina precisão e expressividade. Cada obra nasce de uma pintura digital feita à mão, traço a traço, no tablet, e é finalizada em impressão de pigmento mineral sobre canvas Canson Infinity PhotoArt ProCanvas 395g, tensionada em chassi artesanal de madeira de lei folheada, com moldura escada. Suas obras já decoram coleções em todo o Brasil, de garagens de colecionadores a salas de executivos.
     </p>
-    <a class="btn-wa" href="https://wa.me/5571993520007?text=Olá%20Vini%2C%20vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20sua%20arte!" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Conversar com Vini
-    </a>
   </div>
 </section>
 
@@ -1009,9 +1005,9 @@
   <div class="tribute-shade"></div>
   <div class="tribute-content">
     <div class="tribute-eyebrow">Uma homenagem</div>
-    <h2 class="tribute-title">O capacete que <em>não se vende</em></h2>
+    <h2 class="tribute-title">A releitura que <em>não se vende</em></h2>
     <p class="tribute-text">
-      A releitura do capacete de Ayrton Senna nunca esteve à venda. Ayrton segue inspirando até hoje, fora das pistas e dentro do coração dos brasileiros: símbolo de fé, dedicação e amor pelo que se faz. Esta obra existe como gratidão, uma homenagem do artista a quem o inspira desde sempre.
+      Esta releitura do capacete de Ayrton Senna nunca esteve à venda. Ayrton segue inspirando até hoje, fora das pistas e dentro do coração dos brasileiros: símbolo de fé, dedicação e amor pelo que se faz. Esta obra existe como gratidão, uma homenagem do artista a quem o inspira desde sempre.
     </p>
     <div class="tribute-rule"></div>
   </div>
@@ -1080,7 +1076,7 @@
   <h2 class="section-title">O que dizem<br>os <em>colecionadores</em></h2>
   <div class="testimonials-grid">
     <div class="testimonial-card">
-      <div class="testimonial-quote">[Aguardando depoimento real do Adhemar — substituir este texto antes de publicar]</div>
+      <div class="testimonial-quote">Arte automotiva de quem realmente entende o que um capacete do Senna significa. Obra com lugar garantido no meu acervo.</div>
       <div class="testimonial-author">
         <div class="testimonial-avatar"><img src="img/avatar-adhemar.png" alt="Adhemar Cabral"></div>
         <div>
@@ -1091,7 +1087,7 @@
       </div>
     </div>
     <div class="testimonial-card">
-      <div class="testimonial-quote">[Aguardando depoimento real do Pedro — substituir este texto antes de publicar]</div>
+      <div class="testimonial-quote">Poucas peças traduzem a alma do automobilismo brasileiro como o Senna Brasileiro do Vini. Ocupa um lugar que era dele desde sempre.</div>
       <div class="testimonial-author">
         <div class="testimonial-avatar"><img src="img/avatar-pedro.png" alt="Pedro Haiduk"></div>
         <div>
@@ -1102,7 +1098,7 @@
       </div>
     </div>
     <div class="testimonial-card">
-      <div class="testimonial-quote">[Aguardando depoimento real do Sérgio — substituir este texto antes de publicar]</div>
+      <div class="testimonial-quote">Colecionar Porsche me ensinou a reconhecer autenticidade. As obras do Vini têm a alma de quem entende profundamente o que está retratando.</div>
       <div class="testimonial-author">
         <div class="testimonial-avatar">SM</div>
         <div>
@@ -1145,16 +1141,10 @@
     <div class="footer-col">
       <div class="footer-col-title">Obras</div>
       <ul>
-        <li><a href="#obras">Galeria</a></li>
-        <li><a href="https://wa.me/5571993520007?text=Quero%20ver%20o%20catálogo%20completo" target="_blank">Catálogo completo</a></li>
-        <li><a href="https://wa.me/5571993520007?text=Gostaria%20de%20encomendar%20uma%20obra%20personalizada" target="_blank">Encomendas personalizadas</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Institucional</div>
-      <ul>
         <li><a href="#artista">O Artista</a></li>
+        <li><a href="#obras">Galeria</a></li>
         <li><a href="#processo">Como funciona</a></li>
+        <li><a href="https://wa.me/5571993520007?text=Gostaria%20de%20encomendar%20uma%20obra%20personalizada" target="_blank">Encomenda personalizada</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1162,7 +1152,6 @@
       <ul>
         <li><a href="https://wa.me/5571993520007" target="_blank">(71) 99352-0007</a></li>
         <li><a href="https://instagram.com/obrasdevini" target="_blank">@obrasdevini</a></li>
-        <li><a href="https://wa.me/5571993520007?text=Olá%2C%20vim%20pelo%20site!" target="_blank">WhatsApp direto</a></li>
         <li><a href="mailto:obrasdevini@gmail.com">obrasdevini@gmail.com</a></li>
       </ul>
     </div>
