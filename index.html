@@ -816,9 +816,18 @@
     .artwork-card.wide { grid-column: span 1; aspect-ratio: 2/1; }
               .testimonials-section { padding: 60px 24px; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .testimonial-thumb { width: 40%; }
-    .testimonial-card .testimonial-quote { padding-right: calc(40% + 20px); }
-    .testimonial-card .testimonial-author { padding-right: calc(40% + 20px); }
+    .testimonial-card { padding: 0; }
+    .testimonial-thumb {
+      position: static;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+      display: block;
+    }
+    .testimonial-card .testimonial-quote,
+    .testimonial-card .testimonial-author { padding-right: 0; }
+    .testimonial-card .testimonial-quote { padding: 32px 28px 0; }
+    .testimonial-card .testimonial-author { padding: 20px 28px 32px; }
     .hero-captions { right: 24px; bottom: 48px; }
     .hero-caption { max-width: 240px; }
     .hero-caption-text { font-size: 12px; }
